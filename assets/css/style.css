@@ -1,0 +1,946 @@
+:root {
+  --dark: #1f2a3a;
+  --primary: #f5b000;
+  --radius: 12px;
+}
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Vazirmatn", system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: var(--dark);
+  color: #fff;
+}
+
+.header__grid {
+  height: 80px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* LOGO */
+.logo {
+  justify-self: start;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span { color: #fff; }
+.logo strong { color: var(--primary); }
+
+.nav {
+  justify-self: center;
+}
+
+
+.nav__list {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav__list a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav__list a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #f5b000;
+  transition: .3s;
+}
+
+.nav__list a:hover::after {
+  width: 100%;
+}
+
+
+.header__cta {
+  justify-self: end;
+}
+
+
+/* Hamburger */
+.menu-toggle {
+  width: 30px;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  background: #fff;
+  transition: .3s;
+}
+
+
+/* ================= btn  ================= */
+/* Hamburger Animation */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #f5b000, #ffcc33);
+  color: #1f2a3a;
+  box-shadow: 0 8px 15px rgba(245,176,0,.35);
+}
+
+.btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(245,176,0,.45);
+}
+
+.btn--secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #fff;
+  color: #1f2a3a;
+}
+
+
+/* شماره تماس ها که نمایش و مخفی بشن برای هدر  */
+/* کانتکت دسکتاپ */
+.contact-menu {
+  position: relative;
+}
+
+.contact-popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(31, 42, 58, 0.95);
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.contact-popup a {
+  display: block;
+  padding: 8px 10px;
+  color: #fff; /* رنگ متن سفید روی پس‌زمینه تیره */
+  text-decoration: none;
+  direction: ltr;
+  text-align: left;
+}
+
+.contact-popup a:hover {
+  background: rgba(245, 245, 245, 0.2);
+}
+
+.contact-popup.show {
+  display: block;
+}
+
+/* کانتکت موبایل */
+.mobile-contact .contact-popup {
+  display: none;
+  position: relative;
+  background: rgba(31, 42, 58, 0.95);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.mobile-contact .contact-popup a {
+  color: #fff;
+}
+.mobile-contact .contact-popup.show {
+  display: block;
+}
+
+
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(31,42,58,.95);
+  transform: translateX(100%);
+  transition: .4s;
+  padding-top: 6rem;
+  z-index: 1000;
+}
+
+.mobile-menu.active { transform: translateX(0); }
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-menu li { margin-bottom: 1.5rem; }
+
+.mobile-menu a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+/* ================= CLOSE BUTTON ================= */
+.menu-close {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* چون RTL هست */
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+/* ================= MOBILE MENU ENHANCEMENTS ================= */
+
+/* Blur background */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+  z-index: 900;
+}
+
+.backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* smoother animation */
+.mobile-menu {
+  transition: transform .45s cubic-bezier(.4,0,.2,1);
+}
+
+/* ================= STAGGER MENU ITEMS ================= */
+.mobile-menu li {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.mobile-menu.active li {
+  animation: menuItemFade .45s ease forwards;
+}
+
+.mobile-menu.active li:nth-child(1) { animation-delay: .1s; }
+.mobile-menu.active li:nth-child(2) { animation-delay: .18s; }
+.mobile-menu.active li:nth-child(3) { animation-delay: .26s; }
+.mobile-menu.active li:nth-child(4) { animation-delay: .34s; }
+
+@keyframes menuItemFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= BODY SCROLL LOCK ================= */
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
+}
+/* ================= SAFE AREA IOS ================= */
+.mobile-menu {
+  padding-top: calc(6rem + env(safe-area-inset-top));
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.menu-close {
+  top: calc(20px + env(safe-area-inset-top));
+}
+
+.mobile-menu,
+.backdrop {
+  will-change: transform, opacity;
+}
+
+.menu-toggle,
+.menu-close,
+.mobile-menu a {
+  touch-action: manipulation;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 89svh;
+  background: url("../images/hero/hero-generator.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 54px;
+  margin-bottom: 50px;
+  /* text-shadow:1px 2px 1px var(--primary); */
+}
+
+.hero p {
+  font-size: x-large;
+  margin-block: 30px;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 42, 58, 0.61);
+}
+
+.hero__content {
+  position: relative;
+  max-width: 800px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+
+/* ==================================================
+   HERO FEATURES – EXACT ICON STYLE LIKE IMAGE
+================================================== */
+
+.hero-features {
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  display: flex;
+  gap: 2.8rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ICON CONTAINER */
+.hero-feature .icon {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #f5b000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG STYLE (exact look) */
+.hero-feature svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: #f5b000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero-features {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-features {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* ================= ADVANTAGES ================= */
+.advantages {
+  background: #fff;
+  padding: 3.5rem 0;
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.advantage {
+  color: #f3f4f6;
+  background:var(--dark);
+  padding: 2rem 1.5rem;
+  border-radius: 20PX;
+  text-align: center;
+  font-weight: 700;
+}
+
+.advantage svg {
+  width: 42px;
+  height: 42px;
+  stroke: #f5b000;
+  fill: none;
+  stroke-width: 1.8;
+  margin-bottom: 1rem;
+}
+
+@media (min-width:1024px) {
+  .advantages__grid {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+.advantages .advantage .emoji {
+  font-size: 2.5rem; /* اندازه بزرگ برای جلوه بهتر */
+  color: gold;       /* رنگ طلایی */
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+
+
+/* ================= DESKTOP ================= */
+@media (min-width:1024px) {
+  .nav { display: block; }
+  .nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav__list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .header__cta { display: inline-block; }
+  .menu-toggle { display: none; }
+  .advantages__grid { grid-template-columns: repeat(4,1fr); }
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 1023px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header__grid {
+    grid-template-columns: 1fr auto;
+  }
+
+  .header__cta {
+    display: none; /* مثل اکثر سایت‌های حرفه‌ای */
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin-block: 1.2rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  /* Advantages */
+  .advantages__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage {
+    font-size: 1rem;
+  }
+
+}
+
+
+/* ==================================================
+   PRODUCTS GRID RESPONSIVE FIX
+================================================== */
+
+.products-slider {
+  background: #ffffff;
+  padding: 4rem 0;
+}
+
+.products-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+/* ---------- GRID WRAPPER ---------- */
+.products-track {
+  display: grid;
+  gap: 2rem;
+}
+
+
+/* Desktop & Laptop → 3 cards */
+@media (min-width: 1024px) {
+  .products-track {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet → 2 cards (optional but professional) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .products-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile → 1 card */
+@media (max-width: 767px) {
+  .products-track {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- CARD INTERNAL LAYOUT ---------- */
+.product-slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* ---------- CARD BORDER & SHADOW ENHANCEMENT ---------- */
+.product-slide {
+  border: 1px solid rgba(31,42,58,0.08);
+  box-shadow:
+    0 8px 18px rgba(31,42,58,0.08),
+    0 1px 2px rgba(0,0,0,0.04);
+  background: #f7f8fa; /* جدا از بکگراند سفید */
+}
+
+
+/* Head */
+.product-head {
+  background: linear-gradient(135deg, #1f2a3a, #27364a);
+  color: #fff;
+  font-weight: 700;
+  padding: .9rem 1rem;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+}
+
+/* Image */
+.product-slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin: 1rem 0;
+}
+
+/* Body */
+.product-body {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem 1rem;
+}
+
+.product-body p {
+  color: #444;
+  margin-bottom: 1.2rem;
+  font-size: .95rem;
+}
+
+
+
+.product-actions .btn {
+  padding: .55rem 1.2rem;
+  font-size: .85rem;
+  border-radius: 999px;
+}
+
+
+
+/* ---------- ACTION BUTTONS (UPDATED COLORS) ---------- */
+.product-actions {
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+}
+
+/* اطلاعات بیشتر → طلایی */
+.product-actions .info {
+  background: linear-gradient(135deg, #f5b000, #ffcc33);
+  color: #1f2a3a;
+  border: none;
+  box-shadow: 0 6px 14px rgba(245,176,0,.35);
+}
+
+.product-actions .info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(245,176,0,.45);
+}
+
+/* تماس → کم‌رنگ‌تر و مینیمال */
+.product-actions .contact {
+  background: #d7d8d8;
+  color: #444;
+  border: 1px solid #ddd;
+  font-size: 15px
+}
+
+.product-actions .contact:hover {
+  background: #e6e7ea;
+  color: #111;
+}
+
+
+/* ================= PRODUCT CARD HOVER EFFECT ================= */
+
+.product-slide {
+  transition:
+    transform .45s cubic-bezier(.4,0,.2,1),
+    box-shadow .45s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+}
+
+@media (hover:hover) {
+
+  .product-slide:hover {
+    transform: translateY(-12px) scale(1.015);
+    box-shadow:
+      0 18px 40px rgba(31,42,58,.18),
+      0 4px 10px rgba(0,0,0,.08);
+  }
+
+  .product-slide:hover .product-head {
+    background: linear-gradient(135deg, #1f2a3a, #1b2433);
+  }
+
+  .product-slide:hover img {
+    transform: scale(1.05);
+  }
+
+  .product-slide img {
+    transition: transform .45s ease;
+  }
+}
+
+
+/* ================= GLOBAL MOBILE IMPROVEMENTS ================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Products spacing */
+  .products-slider {
+    padding: 3rem 0;
+  }
+
+  .product-slide img {
+    height: 160px;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .product-actions .btn {
+    width: 100%;
+  }
+}
+
+
+/* ================= PRODUCTS TITLE CENTERED WITH LINES ================= */
+
+.products-title {
+  position: relative;
+  display: flex;              
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 2.5rem;
+}
+
+/* خطوط چپ و راست */
+.products-title::before,
+.products-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(31,42,58,.35),
+    transparent
+  );
+}
+
+/* موبایل – خط کوتاه‌تر */
+@media (max-width: 576px) {
+  .products-title::before,
+  .products-title::after {
+    flex: .5;
+  }
+}
+
+
+/* ================= BESTSELLERS SLIDER ================= */
+.bestsellers-slider {
+  background: #f7f8fa;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.bestsellers-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bestsellers-title::before,
+.bestsellers-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, transparent, rgba(31,42,58,.35), transparent);
+}
+
+@media (max-width: 576px) {
+  .bestsellers-title::before,
+  .bestsellers-title::after {
+    flex: .5;
+  }
+}
+
+.bestsellers-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.bestsellers-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.bestsellers-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* کارت‌ها اختصاصی برای پرفروش‌ها بدون هاور */
+.bestseller-card {
+  flex: 0 0 auto;
+  width: 300px; /* ثابت برای اسکرول */
+  border: 1px solid rgba(31,42,58,0.08);
+  background: #f7f8fa;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Head */
+.bestseller-card .product-head {
+  background: linear-gradient(135deg, #f5b000, #27364a);
+  color: #fff;
+  font-weight: 700;
+  padding: .9rem 1rem;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Image */
+.bestseller-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin: 1rem 0;
+}
+
+/* Body */
+.bestseller-card .product-body {
+  flex: 1;
+  padding: 0 1rem 1rem;
+}
+
+.bestseller-card .product-body p {
+  color: #444;
+  margin-bottom: 1.2rem;
+  font-size: .95rem;
+}
+
+.bestseller-card .product-actions {
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+}
+
+.bestseller-card .product-actions .btn {
+  padding: .55rem 1.2rem;
+  font-size: .85rem;
+  border-radius: 999px;
+}
+
+.bestseller-card .product-actions .info {
+  background: linear-gradient(135deg, #f5b000, #ffcc33);
+  color: #1f2a3a;
+  border: none;
+  box-shadow: 0 6px 14px rgba(245,176,0,.35);
+}
+
+.bestseller-card .product-actions .contact {
+  background: #d7d8d8;
+  color: #444;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+/* دکمه‌های navigation */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.slider-btn:hover {
+  opacity: 1;
+}
+
+.slider-btn.prev {
+  right: 10px; /* RTL */
+}
+
+.slider-btn.next {
+  left: 10px; /* RTL */
+}
+
+/* روی موبایل دکمه‌ها نمایش داده شود */
+@media (max-width: 767px) {
+  .slider-btn {
+    display: flex;
+  }
+}
+
