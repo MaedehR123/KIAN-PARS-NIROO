@@ -422,49 +422,108 @@ button:focus-visible {
 
 
 /* ================= ADVANTAGES ================= */
+
 .advantages {
-  background: #fff;
-  padding: 3.5rem 0;
+  background: #ffffff;          
+  padding: 1.5rem 0;            
 }
 
 .advantages__grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 2rem;
+  display: flex;               /* استفاده از فلکس برای کنترل کامل */
+  justify-content: space-between;
+  flex-wrap: nowrap;           /* جلوگیری از رفتن کارت‌ها زیر هم */
+  gap: 0.5rem;
 }
 
+/* کارت */
 .advantage {
-  color: #f3f4f6;
-  background:var(--dark);
-  padding: 2rem 1.5rem;
-  border-radius: 20PX;
+  background: transparent;      
+  color: #1f2a3a;
+  padding: 0.5rem 0.3rem;     
+  border-radius: 15px;
   text-align: center;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1 1 0;                /* همه کارت‌ها یکسان و مقیاس پذیر */
+  max-width: 22%;             /* حدود 4 کارت کنار هم در موبایل */
 }
 
-.advantage svg {
-  width: 42px;
-  height: 42px;
-  stroke: #f5b000;
-  fill: none;
-  stroke-width: 1.8;
-  margin-bottom: 1rem;
+/* ===== ICON BOX ===== */
+.advantage-icon-box {
+  width: 50px;                 
+  height: 50px;
+  margin-bottom: 0.2rem;      
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width:1024px) {
+.advantage-icon-box img {
+  width: 100%;                  
+  height: 100%;
+  object-fit: contain;
+}
+
+/* متن */
+.advantage p {
+  font-size: 0.75rem;            
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* دسکتاپ */
+@media (min-width: 768px) {
   .advantages__grid {
-    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+  }
+
+  .advantage-icon-box {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.4rem;
+  }
+
+  .advantage p {
+    font-size: 0.95rem;
+  }
+
+  .advantage {
+    padding: 1rem 0.5rem;
+    max-width: 22%;
   }
 }
 
-.advantages .advantage .emoji {
-  font-size: 2.5rem; /* اندازه بزرگ برای جلوه بهتر */
-  color: gold;       /* رنگ طلایی */
-  display: block;
-  margin-bottom: 0.5rem;
-  text-align: center;
+/* دسکتاپ بزرگتر */
+@media (min-width: 1024px) {
+  .advantages__grid {
+    gap: 1.5rem;
+  }
+
+  .advantage-icon-box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.6rem;
+  }
+
+  .advantage p {
+    font-size: 1rem;
+  }
+
+  .advantage {
+    padding: 1.5rem 0.8rem;
+    max-width: 22%;
+  }
 }
 
+/* هاور */
+@media (hover:hover) {
+  .advantage:hover .advantage-icon-box {
+    transform: scale(1.1);
+  }
+}
 
 
 /* ================= DESKTOP ================= */
