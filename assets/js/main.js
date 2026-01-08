@@ -85,3 +85,30 @@ if(mobileBtn && mobilePopup) {
     }
   });
 }
+
+
+// ===== BESTSELLERS SLIDER =====
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".bestsellers-track");
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const nextBtn = document.querySelector(".slider-btn.next");
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  // مقدار اسکرول = عرض یک کارت + فاصله gap
+  const scrollAmount = 320;
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({
+      left: -scrollAmount, // RTL → بعدی
+      behavior: "smooth"
+    });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({
+      left: scrollAmount, // RTL → قبلی
+      behavior: "smooth"
+    });
+  });
+});
