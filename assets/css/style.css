@@ -527,6 +527,7 @@ button:focus-visible {
 
 
 /* ================= DESKTOP ================= */
+
 @media (min-width:1024px) {
   .nav { display: block; }
   .nav__list {
@@ -577,23 +578,32 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 1.5rem;
     line-height: 1.4;
+    text-align: center;
   }
 
   .hero p {
+    text-align: center;
     font-size: 1.1rem;
     margin-block: 1.2rem;
   }
 
-  .hero__actions {
-    flex-direction: column;
-    align-items: stretch;
+   .hero__actions {
+    flex-direction: row;        
+    justify-content: center;   
+    gap: 0.6rem;              
   }
 
   .hero__actions .btn {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;                
+    font-size: 0.85rem;         
+    padding: 0.45rem 1rem;     
   }
 
   /* Advantages */
@@ -606,6 +616,7 @@ button:focus-visible {
   }
 
 }
+
 
 
 /* ==================================================
