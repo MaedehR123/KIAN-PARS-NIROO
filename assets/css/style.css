@@ -1281,3 +1281,663 @@ button:focus-visible {
     gap: 0.5rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* ================= CATEGORY TABS ================= */
+/* ================= CATEGORY TABS ================= */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.6rem 1.8rem;
+  background: #e9ecef;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: #495057;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  background: #dee2e6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #1f2a3a, #27364a);
+  color: #fff;
+  border-color: #f5b000;
+  box-shadow: 0 6px 16px rgba(31, 42, 58, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ================= PRODUCTS SLIDER CONTAINER ================= */
+.products-slider {
+  background: #ffffff;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.products-slider .products-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products-slider .products-title::before,
+.products-slider .products-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, transparent, rgba(31,42,58,.35), transparent);
+}
+
+@media (max-width: 576px) {
+  .products-slider .products-title::before,
+  .products-slider .products-title::after {
+    flex: .5;
+  }
+}
+
+/* ================= PRODUCTS WRAPPER ================= */
+.products-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 0 50px; /* فضای دکمه‌های ناوبری */
+}
+
+.products-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.products-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= PRODUCT CARDS ================= */
+.products-track .product-slide {
+  flex: 0 0 auto;
+  width: 300px;
+  border: 1px solid rgba(31, 42, 58, 0.08);
+  border-radius: 12px;
+  background: #f7f8fa;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.products-track .product-slide.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+/* Head */
+.products-track .product-head {
+  background: linear-gradient(135deg, #1f2a3a, #27364a);
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Image */
+.products-track .product-slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  transition: transform 0.4s ease;
+}
+
+/* Body */
+.products-track .product-body {
+  flex: 1;
+  padding: 0 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-track .product-body p {
+  color: #444;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.products-track .product-body p:last-of-type {
+  margin-bottom: auto;
+}
+
+/* Actions */
+.products-track .product-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.products-track .product-actions .btn {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* اطلاعات بیشتر → طلایی */
+.products-track .product-actions .info {
+  background: linear-gradient(135deg, #f5b000, #ffcc33);
+  color: #1f2a3a;
+  box-shadow: 0 6px 14px rgba(245, 176, 0, 0.35);
+}
+
+.products-track .product-actions .info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(245, 176, 0, 0.45);
+}
+
+/* استعلام قیمت → مینیمال */
+.products-track .product-actions .contact {
+  background: #e9ecef;
+  color: #444;
+  border: 1px solid #ddd;
+  font-size: 0.85rem;
+}
+
+.products-track .product-actions .contact:hover {
+  background: #dee2e6;
+  color: #111;
+}
+
+/* ================= NAVIGATION BUTTONS ================= */
+.products-wrapper .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(31, 42, 58, 0.2);
+}
+
+.products-wrapper .slider-btn:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.05);
+  background: #27364a;
+}
+
+.products-wrapper .slider-btn.prev {
+  right: 0;
+}
+
+.products-wrapper .slider-btn.next {
+  left: 0;
+}
+
+.products-wrapper .slider-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+}
+
+.products-wrapper .slider-btn:disabled:hover {
+  transform: translateY(-50%);
+  background: var(--dark);
+}
+
+/* ================= HOVER EFFECTS ================= */
+@media (hover: hover) {
+  .products-track .product-slide:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(31, 42, 58, 0.15);
+  }
+
+  .products-track .product-slide:hover img {
+    transform: scale(1.05);
+  }
+
+  .products-track .product-slide:hover .product-head {
+    background: linear-gradient(135deg, #27364a, #1f2a3a);
+  }
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 1024px) {
+  .products-track .product-slide {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-slider {
+    padding: 3rem 0;
+  }
+
+  .products-slider .products-title {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .products-wrapper {
+    padding: 0 40px;
+  }
+
+  .products-track .product-slide {
+    width: 260px;
+  }
+
+  .products-track .product-slide img {
+    height: 160px;
+  }
+
+  .products-wrapper .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-slider .products-title {
+    font-size: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .category-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .category-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+
+  .products-wrapper {
+    padding: 0 35px;
+  }
+
+  .products-track {
+    gap: 1rem;
+  }
+
+  .products-track .product-slide {
+    width: 240px;
+  }
+
+  .products-track .product-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .products-track .product-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ================= EMPTY STATE ================= */
+.products-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
+.products-empty.hidden {
+  display: none;
+}
+
+/* ================= SMOOTH TRANSITIONS ================= */
+.product-slide,
+.category-btn,
+.slider-btn {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* ================= مخفی کردن تعداد محصولات ================= */
+.product-count {
+  display: none !important;
+}
+
+.brand-title .product-count {
+  display: none;
+}
+
+/* ================= ANIMATION FOR FILTER ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.products-track .product-slide {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+
+
+
+/* ================= SCROLLABLE CATEGORIES WITH BETTER UX ================= */
+@media (max-width: 768px) {
+  .category-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0.5rem 0.5rem 1rem;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .category-btn {
+    flex: 0 0 auto;
+    width: 140px;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.8rem;
+    white-space: normal;
+    line-height: 1.3;
+    min-height: 50px;
+  }
+  
+  /* نشانگر اسکرول */
+  .category-tabs-container {
+    position: relative;
+  }
+  
+  .category-tabs-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(31, 42, 58, 0.1), transparent);
+  }
+}
+
+/* دسکتاپ */
+@media (min-width: 769px) {
+  .category-tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ================= MULTI-LEVEL PRODUCTS SLIDER ================= */
+.products-content {
+  margin-top: 2rem;
+}
+
+/* برندها */
+.brand-section {
+  margin-bottom: 3rem;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f5b000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-title::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(31, 42, 58, 0.1);
+}
+
+/* Slider Container */
+.brand-slider-container {
+  position: relative;
+  padding: 0 50px;
+  margin-bottom: 1rem;
+}
+
+.brand-products-slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0.5rem 0.5rem 1.5rem;
+}
+
+.brand-products-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* محصولات داخل اسلایدر برند */
+.brand-product-slide {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(31, 42, 58, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.brand-product-slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Head */
+.brand-product-slide .product-head {
+  background: linear-gradient(135deg, #1f2a3a, #27364a);
+  color: #fff;
+  padding: 1rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Image */
+.brand-product-slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+/* Body */
+.brand-product-slide .product-body {
+  padding: 0 1rem 1.5rem;
+  text-align: center;
+}
+
+.brand-product-slide .product-body p {
+  color: #444;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Actions */
+.brand-product-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.brand-product-actions .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.brand-product-actions .info {
+  background: linear-gradient(135deg, #f5b000, #ffcc33);
+  color: #1f2a3a;
+}
+
+.brand-product-actions .contact {
+  background: #e9ecef;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+/* دکمه‌های ناوبری برند */
+.brand-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.brand-nav-btn:hover {
+  opacity: 1;
+  background: #27364a;
+}
+
+.brand-nav-btn.prev {
+  right: 0;
+}
+
+.brand-nav-btn.next {
+  left: 0;
+}
+
+.brand-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.brand-loading {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .brand-slider-container {
+    padding: 0 40px;
+  }
+  
+  .brand-product-slide {
+    width: 280px;
+  }
+  
+  .brand-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-slider-container {
+    padding: 0 35px;
+  }
+  
+  .brand-product-slide {
+    width: 250px;
+  }
+  
+  .brand-product-actions {
+    flex-direction: column;
+  }
+  
+  .brand-product-actions .btn {
+    width: 100%;
+  }
+}
