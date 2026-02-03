@@ -632,35 +632,35 @@ document.addEventListener("DOMContentLoaded", () => {
             {
               id: 1,
               name: "موتور برق بنزینی SRG E2500",
-              image: "assets/images/PRODUCTS/موتور برق بنزینی/SRG E2500.WEBP",
+              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E2500.webp",
               power: "۲۵۰۰ وات",
               features: ["استارت", "هندل", "ولت متر", "باتری", "۲۲۰ ولت"]
             },
             {
               id: 2,
               name: "موتور برق بنزینی SRG E4000",
-              image: "assets/images/PRODUCTS/موتور برق بنزینی/SRG E4000.webp",
+              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E4000.webp",
               power: "۴۰۰۰ وات",
               features: ["استارت", "هندل", "ولت متر", "باتری", "۲۲۰ ولت"]
             },
             {
               id: 3,
               name: "موتور برق بنزینی SRG E6500E",
-              image: "assets/images/PRODUCTS/موتور برق بنزینی/SRG E6500E.webp",
+              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E6500E.webp",
               power: "۶۵۰۰ وات",
               features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت"]
             },
             {
               id: 4,
               name: "موتور برق بنزینی SR6500ISE",
-              image: "assets/images/PRODUCTS/موتور برق بنزینی/SR 65000ISE.WEBP",
+              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SR6500ISE.webp",
               power: "۶۵۰۰ وات - Silent",
               features: ["استارت", "هندل", "ولت متر", "باتری", "SUPER SILENT", "۲۲۰ ولت"]
             },
             {
               id: 5,
               name: "موتور برق بنزینی SRG E7500",
-              image: "assets/images/PRODUCTS/موتور برق بنزینی/SRG E7500.WEBP",
+              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E7500.webp",
               power: "۷۵۰۰ وات",
               features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت"]
             }
@@ -779,7 +779,6 @@ document.addEventListener("DOMContentLoaded", () => {
         html += `
           <div class="brand-section" id="${brandSlug}">
             <h3 class="brand-title">
-              <span class="brand-icon">⚙️</span>
               ${brandData.name}
               <span class="product-count">(${brandData.products.length} محصول)</span>
             </h3>
@@ -981,3 +980,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(setupTouchSwipe, 1000);
   }
 });
+
