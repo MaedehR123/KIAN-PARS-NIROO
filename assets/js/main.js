@@ -619,137 +619,192 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+
+
 // ===== MULTI-LEVEL PRODUCTS SLIDER =====
+
+/**
+ * Product Slider JavaScript
+ * مدیریت اسلایدر محصولات با دسته‌بندی‌های جدید
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
-  // داده‌های محصولات (می‌توانید از JSON هم استفاده کنید)
+  // داده‌های محصولات کامل
   const productsData = {
+    // ===== دسته اول: دیزل ژنراتور =====
+    diesel: {
+      title: "دیزل ژنراتور",
+      brands: {
+        BAUDOUIN: {
+          name: "BAUDOUIN",
+          products: [
+            { id: 1, name: "دیزل ژنراتور BAUDOUIN DSG20A/B", power: "20 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp30.webp", features: ["صنعتی", "کم صدا", "استارت اتوماتیک"] },
+            { id: 2, name: "دیزل ژنراتور BAUDOUIN DSG25A/B", power: "25 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp50.webp", features: ["صنعتی", "کم مصرف", "سیستم خنک‌کننده"] },
+            { id: 3, name: "دیزل ژنراتور BAUDOUIN DSG35A/B", power: "35 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp75.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
+            { id: 4, name: "دیزل ژنراتور BAUDOUIN DSG50A/B", power: "50 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp100.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 5, name: "دیزل ژنراتور BAUDOUIN DSG70A/B", power: "72 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp125.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 6, name: "دیزل ژنراتور BAUDOUIN DSG88A/B", power: "88 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp150.webp", features: ["صنعتی", "پرقدرت", "گارانتی 1 ساله"] },
+            { id: 7, name: "دیزل ژنراتور BAUDOUIN DSG110A/B", power: "110 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp200.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 8, name: "دیزل ژنراتور BAUDOUIN DSG150A/B", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp250.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 9, name: "دیزل ژنراتور BAUDOUIN DSG165A/B", power: "165 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp300.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+            { id: 10, name: "دیزل ژنراتور BAUDOUIN DSG220A/B", power: "220 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp350.webp", features: ["صنعتی", "پرقدرت", "گارانتی 1 ساله"] }
+          ]
+        },
+        cummins: {
+          name: "CUMMINS",
+          products: [
+            { id: 11, name: "دیزل ژنراتور Cummins C30D5", power: "30 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c30d5.webp", features: ["صنعتی", "کم صدا", "کیفیت بالا"] },
+            { id: 12, name: "دیزل ژنراتور Cummins C50D6", power: "50 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c50d6.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
+            { id: 13, name: "دیزل ژنراتور Cummins C75D6", power: "75 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c75d6.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
+            { id: 14, name: "دیزل ژنراتور Cummins C100D6", power: "100 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c100d6.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 15, name: "دیزل ژنراتور Cummins C125D6", power: "125 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c125d6.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 16, name: "دیزل ژنراتور Cummins C150D6", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c150d6.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 17, name: "دیزل ژنراتور Cummins C175D6", power: "175 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c175d6.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 18, name: "دیزل ژنراتور Cummins C200D6", power: "200 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c200d6.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 19, name: "دیزل ژنراتور Cummins C250D6", power: "250 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c250d6.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+            { id: 20, name: "دیزل ژنراتور Cummins C300D6", power: "300 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c300d6.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
+          ]
+        },
+        volvo: {
+          name: "VOLVO",
+          products: [
+            { id: 21, name: "دیزل ژنراتور Volvo Penta D30", power: "30 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d30.webp", features: ["صنعتی", "کیفیت سوئدی", "کم صدا"] },
+            { id: 22, name: "دیزل ژنراتور Volvo Penta D50", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d50.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
+            { id: 23, name: "دیزل ژنراتور Volvo Penta D75", power: "75 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d75.webp", features: ["صنعتی", "کیفیت سوئدی", "بازدهی بالا"] },
+            { id: 24, name: "دیزل ژنراتور Volvo Penta D100", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d100.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 25, name: "دیزل ژنراتور Volvo Penta D125", power: "125 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d125.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 26, name: "دیزل ژنراتور Volvo Penta D150", power: "150 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d150.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 27, name: "دیزل ژنراتور Volvo Penta D175", power: "175 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d175.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 28, name: "دیزل ژنراتور Volvo Penta D200", power: "200 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d200.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 29, name: "دیزل ژنراتور Volvo Penta D250", power: "250 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d250.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+            { id: 30, name: "دیزل ژنراتور Volvo Penta D300", power: "300 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d300.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
+          ]
+        },
+        perkins: {
+          name: "PERKINS",
+          products: [
+            { id: 31, name: "دیزل ژنراتور Perkins 3/152", power: "25 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-15.webp", features: ["صنعتی", "کم صدا", "استارت اتوماتیک"] },
+            { id: 32, name: "دیزل ژنراتور Perkins 4/236", power: "42 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-30.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
+            { id: 33, name: "دیزل ژنراتور Perkins 4/244MN", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-50.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
+            { id: 34, name: "دیزل ژنراتور Perkins 4/244TG1", power: "60 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-75.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 35, name: "دیزل ژنراتور Perkins 4040", power: "72کیلووات", image: "assets/images/PRODUCTS/diesel/perkins/403a-100.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 36, name: "دیزل ژنراتور Perkins 4/40A", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-125.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 37, name: "دیزل ژنراتور Perkins 6/60TGE", power: "120 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-150.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 38, name: "دیزل ژنراتور Perkins 6/60TGE", power: "140 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-175.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 39, name: "دیزل ژنراتور Perkins 6/60TAGE", power: "150 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-200.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+            // { id: 40, name: "دیزل ژنراتور Perkins 403A-250", power: "250 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-250.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
+          ]
+        }
+      }
+    },
+    
+    // ===== دسته دوم: ژنراتور گازی =====
+    gas: {
+      title: "ژنراتور گازی",
+      brands: {
+        perkins: {
+          name: "PERKINS",
+          products: [
+            { id: 41, name: "ژنراتور گازی Perkins 40244MN.GAS", power: "40 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-10.webp", features: ["گازسوز", "اقتصادی", "کم آلاینده"] },
+            { id: 42, name: "ژنراتور گازی Perkins 40244TG.GAS", power: "60 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-15.webp", features: ["گازسوز", "کم صدا", "استارت اتوماتیک"] },
+            { id: 43, name: "ژنراتور گازی Perkins 6060T.GAS", power: "100 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-20.webp", features: ["گازسوز", "کم مصرف", "سیستم هشدار"] },
+            { id: 44, name: "ژنراتور گازی Perkins 6060TA.GAS", power: "125 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-25.webp", features: ["گازسوز", "کم صدا", "بازدهی بالا"] },
+            // { id: 45, name: "ژنراتور گازی Perkins GP-30", power: "30 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-30.webp", features: ["گازسوز", "فشار قوی", "مقاوم در شرایط سخت"] },
+            // { id: 46, name: "ژنراتور گازی Perkins GP-40", power: "40 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-40.webp", features: ["گازسوز", "استارت سریع", "کنترل دیجیتال"] },
+            // { id: 47, name: "ژنراتور گازی Perkins GP-50", power: "50 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-50.webp", features: ["گازسوز", "پرقدرت", "گارانتی 2 ساله"] },
+            // { id: 48, name: "ژنراتور گازی Perkins GP-60", power: "60 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-60.webp", features: ["گازسوز", "پرقدرت", "سیستم هشدار هوشمند"] },
+            // { id: 49, name: "ژنراتور گازی Perkins GP-75", power: "75 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-75.webp", features: ["گازسوز", "پرقدرت", "سیستم کنترل از راه دور"] },
+            // { id: 50, name: "ژنراتور گازی Perkins GP-100", power: "100 کیلووات", image: "assets/images/PRODUCTS/gas/perkins/gp-100.webp", features: ["گازسوز", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+          ]
+        }
+      }
+    },
+    
+    // ===== دسته سوم: آلترناتور =====
+    alternator: {
+      title: "آلترناتور",
+      brands: {
+        stamford: {
+          name: "STAMFORD",
+          products: [
+            { id: 51, name: "آلترناتور Stamford DS 164 B", power: "12.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci224.webp", features: ["کیفیت بالا", "بازدهی 95%", "عایق کلاس H"] },
+            { id: 52, name: "آلترناتور Stamford DS 164 C", power: "13.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci274.webp", features: ["کیفیت بالا", "کم صدا", "استارت سریع"] },
+            { id: 53, name: "آلترناتور Stamford DS 164 D", power: "16 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci324.webp", features: ["کیفیت بالا", "کم مصرف", "سیستم خنک‌کننده"] },
+            { id: 54, name: "آلترناتور Stamford DS 184 ES", power: "20 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci374.webp", features: ["کیفیت بالا", "کم صدا", "بازدهی بالا"] },
+            { id: 55, name: "آلترناتور Stamford DS 184 F", power: "22.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci424.webp", features: ["کیفیت بالا", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 56, name: "آلترناتور Stamford DS 184 G", power: "27.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci474.webp", features: ["کیفیت بالا", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 57, name: "آلترناتور Stamford DS 184 H", power: "31.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci524.webp", features: ["کیفیت بالا", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 58, name: "آلترناتور Stamford DS 184 J", power: "37.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci574.webp", features: ["کیفیت بالا", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 59, name: "آلترناتور Stamford DS 224 C", power: "40 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci624.webp", features: ["کیفیت بالا", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 60, name: "آلترناتور Stamford DS 224 D", power: "42.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci674.webp", features: ["کیفیت بالا", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+          ]
+        },
+        stamfordCoal: {
+          name: "STREAN ذغالی",
+          products: [
+            { id: 61, name: "آلترناتور STREAN ذغالی ST-3", power: "3 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-10.webp", features: ["ذغالی", "اقتصادی", "کم آلاینده"] },
+            { id: 62, name: "آلترناتور STREAN ذغالی ST-5", power: "5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-15.webp", features: ["ذغالی", "کم صدا", "استارت اتوماتیک"] },
+            { id: 63, name: "آلترناتور STREAN ذغالی ST-7.5", power: "7.5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-20.webp", features: ["ذغالی", "کم مصرف", "سیستم هشدار"] },
+            { id: 64, name: "آلترناتور STREAN ذغالی ST-10", power: "10 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-25.webp", features: ["ذغالی", "کم صدا", "بازدهی بالا"] },
+            { id: 65, name: "آلترناتور STREAN ذغالی ST-12", power: "12 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-30.webp", features: ["ذغالی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 66, name: "آلترناتور STREAN ذغالی ST-15", power: "15 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-40.webp", features: ["ذغالی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 67, name: "آلترناتور STREAN ذغالی ST-20", power: "20 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-50.webp", features: ["ذغالی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 68, name: "آلترناتور STREAN ذغالی ST-24", power: "24 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-60.webp", features: ["ذغالی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 69, name: "آلترناتور STREAN ذغالی STC-3", power: "3 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-75.webp", features: ["ذغالی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 70, name: "آلترناتور STREAN ذغالی STC-5", power: "5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-100.webp", features: ["ذغالی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+          ]
+        },
+        meccalte: {
+          name: "MECCALTE",
+          products: [
+            { id: 71, name: "آلترناتور Meccalte S16F", power: "6.5 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m10.webp", features: ["ایتالیایی", "کیفیت بالا", "بازدهی 96%"] },
+            { id: 72, name: "آلترناتور Meccalte S20F", power: "12 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m15.webp", features: ["ایتالیایی", "کم صدا", "استارت سریع"] },
+            { id: 73, name: "آلترناتور Meccalte ECP28-2S/4C", power: "15 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m20.webp", features: ["ایتالیایی", "کم مصرف", "سیستم خنک‌کننده"] },
+            { id: 74, name: "آلترناتور Meccalte ECP28-M/4C", power: "20 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m25.webp", features: ["ایتالیایی", "کم صدا", "بازدهی بالا"] },
+            { id: 75, name: "آلترناتور Meccalte ECP28-L/4C", power: "25 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m30.webp", features: ["ایتالیایی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 76, name: "آلترناتور Meccalte ECP28-VL/4C", power: "30 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m40.webp", features: ["ایتالیایی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 77, name: "آلترناتور Meccalte ECP32-2S/4C", power: "45 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m50.webp", features: ["ایتالیایی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 78, name: "آلترناتور Meccalte ECP32-1M/4C", power: "50 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m60.webp", features: ["ایتالیایی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 79, name: "آلترناتور Meccalte ECP32-2M/4C", power: "62.5 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m75.webp", features: ["ایتالیایی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 80, name: "آلترناتور Meccalte ECP32-1L/4C", power: "75 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m100.webp", features: ["ایتالیایی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+          ]
+        }
+      }
+    },
+    
+    // ===== دسته چهارم: موتور برق بنزینی =====
     gasoline: {
       title: "موتور برق بنزینی",
       brands: {
         shineray: {
           name: "SHINERAY",
           products: [
-            {
-              id: 1,
-              name: "موتور برق بنزینی SRG E2500",
-              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E2500.webp",
-              power: "۲۵۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "۲۲۰ ولت"]
-            },
-            {
-              id: 2,
-              name: "موتور برق بنزینی SRG E4000",
-              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E4000.webp",
-              power: "۴۰۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "۲۲۰ ولت"]
-            },
-            {
-              id: 3,
-              name: "موتور برق بنزینی SRG E6500E",
-              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E6500E.webp",
-              power: "۶۵۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت"]
-            },
-            {
-              id: 4,
-              name: "موتور برق بنزینی SR6500ISE",
-              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SR6500ISE.webp",
-              power: "۶۵۰۰ وات - Silent",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "SUPER SILENT", "۲۲۰ ولت"]
-            },
-            {
-              id: 5,
-              name: "موتور برق بنزینی SRG E7500",
-              image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E7500.webp",
-              power: "۷۵۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت"]
-            }
+            { id: 81, name: "موتور برق بنزینی SRG E2500", power: "2500 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E2500.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "220 ولت"] },
+            { id: 82, name: "موتور برق بنزینی SRG E4000", power: "4000 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E4000.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "220 ولت"] },
+            { id: 83, name: "موتور برق بنزینی SRG E6500E", power: "6500 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E6500E.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 84, name: "موتور برق بنزینی SR6500ISE", power: "6500 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SR6500ISE.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "SUPER SILENT", "220 ولت"] },
+            { id: 85, name: "موتور برق بنزینی SRG E7500", power: "7500 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E7500.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 86, name: "موتور برق بنزینی SRG E8000", power: "8000 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E8000.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 87, name: "موتور برق بنزینی SRG E9000", power: "9000 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E9000.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 88, name: "موتور برق بنزینی SRG E10000", power: "10000 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E10000.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 89, name: "موتور برق بنزینی SRG E12000", power: "12000 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E12000.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 90, name: "موتور برق بنزینی SRG E15000", power: "15000 وات", image: "assets/images/PRODUCTS/motorBargh/برند SHINERAY/SRG E15000.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] }
           ]
         },
         stream: {
           name: "STREAM",
           products: [
-            {
-              id: 6,
-              name: "موتور برق بنزینی ST 9000 D-H",
-              image: "assets/images/PRODUCTS/2.webp",
-              power: "۹۰۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت"]
-            },
-            {
-              id: 7,
-              name: "موتور برق بنزینی ST 10000 D-H",
-              image: "assets/images/PRODUCTS/1.webp",
-              power: "۱۰۰۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت"]
-            },
-            {
-              id: 8,
-              name: "موتور برق بنزینی ST 15000 D-H",
-              image: "assets/images/PRODUCTS/1.webp",
-              power: "۱۵۰۰۰ وات",
-              features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "۲۲۰ ولت", "۳۸۰ ولت"]
-            }
-          ]
-        },
-        honda: {
-          name: "HONDA",
-          products: [
-            {
-              id: 9,
-              name: "موتور برق بنزینی Honda EU10i",
-              image: "assets/images/PRODUCTS/honda1.webp",
-              power: "۱۰۰۰ وات",
-              features: ["اینورتر", "سبک", "کم‌صدا", "اقتصادی"]
-            },
-            {
-              id: 10,
-              name: "موتور برق بنزینی Honda EU22i",
-              image: "assets/images/PRODUCTS/honda2.webp",
-              power: "۲۲۰۰ وات",
-              features: ["اینورتر", "قدرت بالا", "کم مصرف"]
-            }
-          ]
-        }
-      }
-    },
-    diesel: {
-      title: "دیزل ژنراتور",
-      brands: {
-        cummins: {
-          name: "CUMMINS",
-          products: [
-            { id: 11, name: "دیزل ژنراتور Cummins 30kVA", power: "۳۰ کیلووات", image: "assets/images/PRODUCTS/diesel1.webp" },
-            { id: 12, name: "دیزل ژنراتور Cummins 50kVA", power: "۵۰ کیلووات", image: "assets/images/PRODUCTS/diesel2.webp" }
-          ]
-        },
-        perkins: {
-          name: "PERKINS",
-          products: [
-            { id: 13, name: "دیزل ژنراتور Perkins 75kVA", power: "۷۵ کیلووات", image: "assets/images/PRODUCTS/diesel3.webp" }
-          ]
-        }
-      }
-    },
-    gas: {
-      title: "ژنراتور گازی",
-      brands: {
-        generac: {
-          name: "GENERAC",
-          products: [
-            { id: 14, name: "ژنراتور گازی ۱۰ کیلووات", power: "۱۰ کیلووات", image: "assets/images/PRODUCTS/gas1.webp" }
-          ]
-        }
-      }
-    },
-    coupled: {
-      title: "ژنراتور کوپله",
-      brands: {
-        knp: {
-          name: "KNP",
-          products: [
-            { id: 15, name: "ژنراتور کوپل صنعتی ۲۰ کیلووات", power: "۲۰ کیلووات", image: "assets/images/PRODUCTS/coupled1.webp" },
-            { id: 16, name: "ژنراتور کوپل صنعتی ۵۰ کیلووات", power: "۵۰ کیلووات", image: "assets/images/PRODUCTS/coupled2.webp" }
+            { id: 91, name: "موتور برق بنزینی ST 9000 D-H", power: "9000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST9000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 92, name: "موتور برق بنزینی ST 10000 D-H", power: "10000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST10000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت"] },
+            { id: 93, name: "موتور برق بنزینی ST 15000 D-H", power: "15000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST15000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 94, name: "موتور برق بنزینی ST 20000 D-H", power: "20000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST20000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 95, name: "موتور برق بنزینی ST 25000 D-H", power: "25000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST25000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 96, name: "موتور برق بنزینی ST 30000 D-H", power: "30000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST30000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 97, name: "موتور برق بنزینی ST 35000 D-H", power: "35000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST35000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 98, name: "موتور برق بنزینی ST 40000 D-H", power: "40000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST40000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 99, name: "موتور برق بنزینی ST 45000 D-H", power: "45000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST45000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] },
+            { id: 100, name: "موتور برق بنزینی ST 50000 D-H", power: "50000 وات", image: "assets/images/PRODUCTS/motorBargh/برند STREAM/ST50000-D-H.webp", features: ["استارت", "هندل", "ولت متر", "باتری", "چرخ دار", "220 ولت", "380 ولت"] }
           ]
         }
       }
@@ -759,7 +814,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // المنت‌های اصلی
   const productsContent = document.getElementById('productsContent');
   const categoryBtns = document.querySelectorAll('.category-btn');
-  let currentCategory = 'gasoline';
+  let currentCategory = 'diesel'; // دیزل ژنراتور به عنوان دسته اول
 
   // ===== 1. رندر کردن محصولات =====
   function renderProducts(category) {
@@ -780,7 +835,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="brand-section" id="${brandSlug}">
             <h3 class="brand-title">
               ${brandData.name}
-              <span class="product-count">(${brandData.products.length} محصول)</span>
             </h3>
             
             <div class="brand-slider-container">
@@ -880,7 +934,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== 4. به‌روزرسانی کلی دکمه‌های ناوبری =====
   function updateBrandNavButtons() {
-    Object.keys(productsData[currentCategory].brands).forEach(brandKey => {
+    const categoryData = productsData[currentCategory];
+    if (!categoryData) return;
+    
+    Object.keys(categoryData.brands).forEach(brandKey => {
       updateNavButtonsForBrand(`${currentCategory}-${brandKey}`);
     });
   }
@@ -919,7 +976,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===== 6. مقداردهی اولیه =====
   function initProductsSlider() {
     // بارگذاری دسته آخر از localStorage
-    const lastCategory = localStorage.getItem('lastProductCategory') || 'gasoline';
+    const lastCategory = localStorage.getItem('lastProductCategory') || 'diesel';
     
     // تنظیم دکمه فعال
     categoryBtns.forEach(btn => {
@@ -981,3 +1038,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// بقیه کدهای JavaScript شما (برای منو، اسلایدر پرفروش‌ها و ...) بدون تغییر باقی می‌مانند
