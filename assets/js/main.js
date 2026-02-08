@@ -639,16 +639,16 @@ document.addEventListener("DOMContentLoaded", () => {
         BAUDOUIN: {
           name: "BAUDOUIN",
           products: [
-            { id: 1, name: "دیزل ژنراتور BAUDOUIN DSG20A/B", power: "20 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp30.webp", features: ["صنعتی", "کم صدا", "استارت اتوماتیک"] },
-            { id: 2, name: "دیزل ژنراتور BAUDOUIN DSG25A/B", power: "25 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp50.webp", features: ["صنعتی", "کم مصرف", "سیستم خنک‌کننده"] },
-            { id: 3, name: "دیزل ژنراتور BAUDOUIN DSG35A/B", power: "35 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp75.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
-            { id: 4, name: "دیزل ژنراتور BAUDOUIN DSG50A/B", power: "50 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp100.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 5, name: "دیزل ژنراتور BAUDOUIN DSG70A/B", power: "72 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp125.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 6, name: "دیزل ژنراتور BAUDOUIN DSG88A/B", power: "88 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp150.webp", features: ["صنعتی", "پرقدرت", "گارانتی 1 ساله"] },
-            { id: 7, name: "دیزل ژنراتور BAUDOUIN DSG110A/B", power: "110 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp200.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 8, name: "دیزل ژنراتور BAUDOUIN DSG150A/B", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp250.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 9, name: "دیزل ژنراتور BAUDOUIN DSG165A/B", power: "165 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp300.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
-            { id: 10, name: "دیزل ژنراتور BAUDOUIN DSG220A/B", power: "220 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp350.webp", features: ["صنعتی", "پرقدرت", "گارانتی 1 ساله"] }
+            { id: 1, name: "دیزل ژنراتور BAUDOUIN DSG20A/B", power: "20 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp20.webp", features: ["صنعتی", "کم صدا", "استارت اتوماتیک"] },
+            { id: 2, name: "دیزل ژنراتور BAUDOUIN DSG25A/B", power: "25 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp25.webp", features: ["صنعتی", "کم مصرف", "سیستم خنک‌کننده"] },
+            { id: 3, name: "دیزل ژنراتور BAUDOUIN DSG35A/B", power: "35 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp35.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
+            { id: 4, name: "دیزل ژنراتور BAUDOUIN DSG50A/B", power: "50 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp50.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 5, name: "دیزل ژنراتور BAUDOUIN DSG72A/B", power: "72 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp72.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 6, name: "دیزل ژنراتور BAUDOUIN DSG88A/B", power: "88 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp88.webp", features: ["صنعتی", "پرقدرت", "گارانتی 1 ساله"] },
+            { id: 7, name: "دیزل ژنراتور BAUDOUIN DSG110A/B", power: "110 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp110.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 8, name: "دیزل ژنراتور BAUDOUIN DSG150A/B", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp150.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 9, name: "دیزل ژنراتور BAUDOUIN DSG165A/B", power: "165 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp165.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+            { id: 10, name: "دیزل ژنراتور BAUDOUIN DSG220A/B", power: "220 کاوا", image: "assets/images/PRODUCTS/diesel/BAUDOUIN/dwp220.webp", features: ["صنعتی", "پرقدرت", "گارانتی 1 ساله"] }
           ]
         },
         cummins: {
@@ -682,17 +682,17 @@ document.addEventListener("DOMContentLoaded", () => {
           ]
         },
         perkins: {
-          name: "PERKINS",
+          name: "PERKINS(موتور سازان )",
           products: [
-            { id: 31, name: "دیزل ژنراتور Perkins 3/152", power: "25 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-15.webp", features: ["صنعتی", "کم صدا", "استارت اتوماتیک"] },
-            { id: 32, name: "دیزل ژنراتور Perkins 4/236", power: "42 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-30.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
-            { id: 33, name: "دیزل ژنراتور Perkins 4/244MN", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-50.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
-            { id: 34, name: "دیزل ژنراتور Perkins 4/244TG1", power: "60 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-75.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 35, name: "دیزل ژنراتور Perkins 4040", power: "72 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-100.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 36, name: "دیزل ژنراتور Perkins 4/40A", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-125.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
-            { id: 37, name: "دیزل ژنراتور Perkins 6/60TGE", power: "120 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-150.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 38, name: "دیزل ژنراتور Perkins 6/60TGE", power: "140 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-175.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 39, name: "دیزل ژنراتور Perkins 6/60TAGE", power: "150 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-200.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+            { id: 31, name: "دیزل ژنراتور Perkins 3/152", power: "25 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/3152-25.webp", features: ["صنعتی", "کم صدا", "استارت اتوماتیک"] },
+            { id: 32, name: "دیزل ژنراتور Perkins 4/236", power: "42 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/4236-42.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
+            { id: 33, name: "دیزل ژنراتور Perkins 4/244MN", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/4244MN-50.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
+            { id: 34, name: "دیزل ژنراتور Perkins 4/244TG1", power: "60 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/4244TG1-60.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 35, name: "دیزل ژنراتور Perkins 4040", power: "72 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/4040-72.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 36, name: "دیزل ژنراتور Perkins 4/40A", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/440A-100.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 37, name: "دیزل ژنراتور Perkins 6/60TGE", power: "120 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/440A-120.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 38, name: "دیزل ژنراتور Perkins 6/60TAGE", power: "140 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/660TAGE-140.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 39, name: "دیزل ژنراتور Perkins 6/60TAGE", power: "150 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/660TAGE-150.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
             // { id: 40, name: "دیزل ژنراتور Perkins 403A-250", power: "250 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-250.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
           ]
         }
