@@ -688,7 +688,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { id: 32, name: "دیزل ژنراتور Perkins 4/236", power: "42 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-30.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
             { id: 33, name: "دیزل ژنراتور Perkins 4/244MN", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-50.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
             { id: 34, name: "دیزل ژنراتور Perkins 4/244TG1", power: "60 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-75.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 35, name: "دیزل ژنراتور Perkins 4040", power: "72کیلووات", image: "assets/images/PRODUCTS/diesel/perkins/403a-100.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 35, name: "دیزل ژنراتور Perkins 4040", power: "72 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-100.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
             { id: 36, name: "دیزل ژنراتور Perkins 4/40A", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-125.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
             { id: 37, name: "دیزل ژنراتور Perkins 6/60TGE", power: "120 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-150.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
             { id: 38, name: "دیزل ژنراتور Perkins 6/60TGE", power: "140 کاوا ", image: "assets/images/PRODUCTS/diesel/perkins/403a-175.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
