@@ -1039,3 +1039,45 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // بقیه کدهای JavaScript شما (برای منو، اسلایدر پرفروش‌ها و ...) بدون تغییر باقی می‌مانند
+
+
+
+// افزودن این کد به فایل main.js
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+      const faqItem = this.parentElement;
+      const answer = faqItem.querySelector('.faq-answer');
+      const isActive = faqItem.classList.contains('active');
+      
+      // بستن تمام FAQهای دیگر
+      document.querySelectorAll('.faq-item.active').forEach(item => {
+        if (item !== faqItem) {
+          item.classList.remove('active');
+          item.querySelector('.faq-answer').style.maxHeight = '0';
+        }
+      });
+      
+      // فعال‌سازی یا غیرفعال‌سازی این FAQ
+      if (!isActive) {
+        faqItem.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        faqItem.classList.remove('active');
+        answer.style.maxHeight = '0';
+      }
+    });
+  });
+  
+  // باز کردن FAQها با کیبورد
+  faqQuestions.forEach(question => {
+    question.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+});
