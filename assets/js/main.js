@@ -706,10 +706,10 @@ document.addEventListener("DOMContentLoaded", () => {
         perkins: {
           name: "PERKINS",
           products: [
-            { id: 41, name: "ژنراتور گازی Perkins 40244MN.GAS", power: "40 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-10.webp", features: ["گازسوز", "اقتصادی", "کم آلاینده"] },
-            { id: 42, name: "ژنراتور گازی Perkins 40244TG.GAS", power: "60 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-15.webp", features: ["گازسوز", "کم صدا", "استارت اتوماتیک"] },
-            { id: 43, name: "ژنراتور گازی Perkins 6060T.GAS", power: "100 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-20.webp", features: ["گازسوز", "کم مصرف", "سیستم هشدار"] },
-            { id: 44, name: "ژنراتور گازی Perkins 6060TA.GAS", power: "125 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-25.webp", features: ["گازسوز", "کم صدا", "بازدهی بالا"] },
+            { id: 41, name: "ژنراتور گازی Perkins 40244MN.GAS", power: "40 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-40.webp", features: ["گازسوز", "اقتصادی", "کم آلاینده"] },
+            { id: 42, name: "ژنراتور گازی Perkins 40244TG.GAS", power: "60 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-60.webp", features: ["گازسوز", "کم صدا", "استارت اتوماتیک"] },
+            { id: 43, name: "ژنراتور گازی Perkins 6060T.GAS", power: "100 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-100.webp", features: ["گازسوز", "کم مصرف", "سیستم هشدار"] },
+            { id: 44, name: "ژنراتور گازی Perkins 6060TA.GAS", power: "125 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-125.webp", features: ["گازسوز", "کم صدا", "بازدهی بالا"] },
             // { id: 45, name: "ژنراتور گازی Perkins GP-30", power: "30 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-30.webp", features: ["گازسوز", "فشار قوی", "مقاوم در شرایط سخت"] },
             // { id: 46, name: "ژنراتور گازی Perkins GP-40", power: "40 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-40.webp", features: ["گازسوز", "استارت سریع", "کنترل دیجیتال"] },
             // { id: 47, name: "ژنراتور گازی Perkins GP-50", power: "50 کاوا ", image: "assets/images/PRODUCTS/gas/perkins/gp-50.webp", features: ["گازسوز", "پرقدرت", "گارانتی 2 ساله"] },
