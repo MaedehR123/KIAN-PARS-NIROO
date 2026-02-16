@@ -758,16 +758,16 @@ document.addEventListener("DOMContentLoaded", () => {
         meccalte: {
           name: "MECCALTE",
           products: [
-            { id: 71, name: "آلترناتور Meccalte S16F", power: "6.5 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m10.webp", features: ["ایتالیایی", "کیفیت بالا", "بازدهی 96%"] },
-            { id: 72, name: "آلترناتور Meccalte S20F", power: "12 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m15.webp", features: ["ایتالیایی", "کم صدا", "استارت سریع"] },
-            { id: 73, name: "آلترناتور Meccalte ECP28-2S/4C", power: "15 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m20.webp", features: ["ایتالیایی", "کم مصرف", "سیستم خنک‌کننده"] },
-            { id: 74, name: "آلترناتور Meccalte ECP28-M/4C", power: "20 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m25.webp", features: ["ایتالیایی", "کم صدا", "بازدهی بالا"] },
-            { id: 75, name: "آلترناتور Meccalte ECP28-L/4C", power: "25 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m30.webp", features: ["ایتالیایی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 76, name: "آلترناتور Meccalte ECP28-VL/4C", power: "30 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m40.webp", features: ["ایتالیایی", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 77, name: "آلترناتور Meccalte ECP32-2S/4C", power: "45 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m50.webp", features: ["ایتالیایی", "پرقدرت", "گارانتی 2 ساله"] },
-            { id: 78, name: "آلترناتور Meccalte ECP32-1M/4C", power: "50 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m60.webp", features: ["ایتالیایی", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 79, name: "آلترناتور Meccalte ECP32-2M/4C", power: "62.5 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m75.webp", features: ["ایتالیایی", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 80, name: "آلترناتور Meccalte ECP32-1L/4C", power: "75 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m100.webp", features: ["ایتالیایی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+            { id: 71, name: "آلترناتور Meccalte ECP32-1L/4C", power: "75کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m75.webp", features: ["ایتالیایی", "کیفیت بالا", "بازدهی 96%"] },
+            { id: 72, name: "آلترناتور Meccalte ECP32-2L/4C", power: "87.5 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m87.5.webp", features: ["ایتالیایی", "کم صدا", "استارت سریع"] },
+            { id: 73, name: "آلترناتور Meccalte ECP28-2S/4C", power: "100 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m100.webp", features: ["ایتالیایی", "کم مصرف", "سیستم خنک‌کننده"] },
+            { id: 74, name: "آلترناتور Meccalte ECP34-2S/4C", power: "130 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m130.webp", features: ["ایتالیایی", "کم صدا", "بازدهی بالا"] },
+            { id: 75, name: "آلترناتور Meccalte ECP34-2M/4C", power: "135 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m135.webp", features: ["ایتالیایی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 76, name: "آلترناتور Meccalte ECP34-1L/4C", power: "150 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m150.webp", features: ["ایتالیایی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 77, name: "آلترناتور Meccalte ECO38-2S/4", power: "165 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m165.webp", features: ["ایتالیایی", "پرقدرت", "گارانتی 1 ساله"] },
+            { id: 78, name: "آلترناتور Meccalte ECO38-1S/4C", power: "180 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m180.webp", features: ["ایتالیایی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 79, name: "آلترناتور Meccalte ECO38-2S/4", power: "200 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m200.webp", features: ["ایتالیایی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 80, name: "آلترناتور Meccalte ECO38-1L/4", power: "250 کاوا", image: "assets/images/PRODUCTS/alternator/meccalte/m250.webp", features: ["ایتالیایی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
           ]
         }
       }
