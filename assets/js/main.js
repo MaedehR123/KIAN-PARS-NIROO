@@ -654,33 +654,33 @@ document.addEventListener("DOMContentLoaded", () => {
         cummins: {
           name: "CUMMINS",
           products: [
-            { id: 11, name: "دیزل ژنراتور Cummins C30D5", power: "30 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c30d5.webp", features: ["صنعتی", "کم صدا", "کیفیت بالا"] },
-            { id: 12, name: "دیزل ژنراتور Cummins C50D6", power: "50 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c50d6.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
-            { id: 13, name: "دیزل ژنراتور Cummins C75D6", power: "75 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c75d6.webp", features: ["صنعتی", "کم صدا", "بازدهی بالا"] },
-            { id: 14, name: "دیزل ژنراتور Cummins C100D6", power: "100 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c100d6.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 15, name: "دیزل ژنراتور Cummins C125D6", power: "125 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c125d6.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 16, name: "دیزل ژنراتور Cummins C150D6", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c150d6.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
-            { id: 17, name: "دیزل ژنراتور Cummins C175D6", power: "175 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c175d6.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 18, name: "دیزل ژنراتور Cummins C200D6", power: "200 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c200d6.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 19, name: "دیزل ژنراتور Cummins C250D6", power: "250 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c250d6.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
-            { id: 20, name: "دیزل ژنراتور Cummins C300D6", power: "300 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c300d6.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
+            { id: 11, name: "دیزل ژنراتور Cummins <br> 6BTAA5.9G6", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c150.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] },
+            { id: 12, name: "دیزل ژنراتور Cummins <br> 6LTAA9.5G2", power: "312 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c312.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"]  },
+            { id: 13, name: "دیزل ژنراتور Cummins <br>  NTA855G4", power: "400 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c400.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] },
+            { id: 14, name: "دیزل ژنراتور Cummins <br>  KTA19-G4", power: "550 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c550.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"]  },
+            { id: 15, name: "دیزل ژنراتور Cummins <br> KTAA19-G6", power: "650 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c650.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] },
+            // { id: 16, name: "دیزل ژنراتور Cummins C150D6", power: "150 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c150d6.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] },
+            // { id: 17, name: "دیزل ژنراتور Cummins C175D6", power: "175 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c175d6.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"]  },
+            // { id: 18, name: "دیزل ژنراتور Cummins C200D6", power: "200 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c200d6.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] },
+            // { id: 19, name: "دیزل ژنراتور Cummins C250D6", power: "250 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c250d6.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] },
+            // { id: 20, name: "دیزل ژنراتور Cummins C300D6", power: "300 کاوا", image: "assets/images/PRODUCTS/diesel/cummins/c300d6.webp", features: ["توربو شارژ", "الکترونیکی", "انگلیس"] }
           ]
         },
-        volvo: {
-          name: "VOLVO",
-          products: [
-            { id: 21, name: "دیزل ژنراتور Volvo Penta D30", power: "30 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d30.webp", features: ["صنعتی", "کیفیت سوئدی", "کم صدا"] },
-            { id: 22, name: "دیزل ژنراتور Volvo Penta D50", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d50.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
-            { id: 23, name: "دیزل ژنراتور Volvo Penta D75", power: "75 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d75.webp", features: ["صنعتی", "کیفیت سوئدی", "بازدهی بالا"] },
-            { id: 24, name: "دیزل ژنراتور Volvo Penta D100", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d100.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 25, name: "دیزل ژنراتور Volvo Penta D125", power: "125 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d125.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 26, name: "دیزل ژنراتور Volvo Penta D150", power: "150 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d150.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
-            { id: 27, name: "دیزل ژنراتور Volvo Penta D175", power: "175 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d175.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 28, name: "دیزل ژنراتور Volvo Penta D200", power: "200 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d200.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 29, name: "دیزل ژنراتور Volvo Penta D250", power: "250 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d250.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
-            { id: 30, name: "دیزل ژنراتور Volvo Penta D300", power: "300 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d300.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
-          ]
-        },
+        // volvo: {
+        //   name: "VOLVO",
+        //   products: [
+        //     { id: 21, name: "دیزل ژنراتور Volvo Penta D30", power: "30 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d30.webp", features: ["صنعتی", "کیفیت سوئدی", "کم صدا"] },
+        //     { id: 22, name: "دیزل ژنراتور Volvo Penta D50", power: "50 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d50.webp", features: ["صنعتی", "کم مصرف", "سیستم هشدار"] },
+        //     { id: 23, name: "دیزل ژنراتور Volvo Penta D75", power: "75 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d75.webp", features: ["صنعتی", "کیفیت سوئدی", "بازدهی بالا"] },
+        //     { id: 24, name: "دیزل ژنراتور Volvo Penta D100", power: "100 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d100.webp", features: ["صنعتی", "فشار قوی", "مقاوم در شرایط سخت"] },
+        //     { id: 25, name: "دیزل ژنراتور Volvo Penta D125", power: "125 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d125.webp", features: ["صنعتی", "استارت سریع", "کنترل دیجیتال"] },
+        //     { id: 26, name: "دیزل ژنراتور Volvo Penta D150", power: "150 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d150.webp", features: ["صنعتی", "پرقدرت", "گارانتی 2 ساله"] },
+        //     { id: 27, name: "دیزل ژنراتور Volvo Penta D175", power: "175 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d175.webp", features: ["صنعتی", "پرقدرت", "سیستم هشدار هوشمند"] },
+        //     { id: 28, name: "دیزل ژنراتور Volvo Penta D200", power: "200 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d200.webp", features: ["صنعتی", "پرقدرت", "سیستم کنترل از راه دور"] },
+        //     { id: 29, name: "دیزل ژنراتور Volvo Penta D250", power: "250 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d250.webp", features: ["صنعتی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] },
+        //     { id: 30, name: "دیزل ژنراتور Volvo Penta D300", power: "300 کاوا ", image: "assets/images/PRODUCTS/diesel/volvo/penta-d300.webp", features: ["صنعتی", "پرقدرت", "گارانتی 3 ساله"] }
+        //   ]
+        // },
         perkins: {
           name: "PERKINS(موتور سازان )",
           products: [
