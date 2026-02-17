@@ -743,16 +743,16 @@ document.addEventListener("DOMContentLoaded", () => {
         stamfordCoal: {
           name: "STREAN ذغالی",
           products: [
-            { id: 61, name: "آلترناتور STREAN ذغالی ST-3", power: "3 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-10.webp", features: ["ذغالی", "اقتصادی", "کم آلاینده"] },
-            { id: 62, name: "آلترناتور STREAN ذغالی ST-5", power: "5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-15.webp", features: ["ذغالی", "کم صدا", "استارت اتوماتیک"] },
-            { id: 63, name: "آلترناتور STREAN ذغالی ST-7.5", power: "7.5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-20.webp", features: ["ذغالی", "کم مصرف", "سیستم هشدار"] },
-            { id: 64, name: "آلترناتور STREAN ذغالی ST-10", power: "10 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-25.webp", features: ["ذغالی", "کم صدا", "بازدهی بالا"] },
-            { id: 65, name: "آلترناتور STREAN ذغالی ST-12", power: "12 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-30.webp", features: ["ذغالی", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 66, name: "آلترناتور STREAN ذغالی ST-15", power: "15 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-40.webp", features: ["ذغالی", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 67, name: "آلترناتور STREAN ذغالی ST-20", power: "20 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-50.webp", features: ["ذغالی", "پرقدرت", "گارانتی 2 ساله"] },
-            { id: 68, name: "آلترناتور STREAN ذغالی ST-24", power: "24 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-60.webp", features: ["ذغالی", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 69, name: "آلترناتور STREAN ذغالی STC-3", power: "3 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-75.webp", features: ["ذغالی", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 70, name: "آلترناتور STREAN ذغالی STC-5", power: "5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN-coal/sc-100.webp", features: ["ذغالی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+            { id: 61, name: "آلترناتور STREAN ذغالی ST-3", power: "3 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-3.webp", features: ["ذغالی", "اقتصادی", "کم آلاینده"] },
+            { id: 62, name: "آلترناتور STREAN ذغالی ST-5", power: "5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-5.webp", features: ["ذغالی", "کم صدا", "استارت اتوماتیک"] },
+            { id: 63, name: "آلترناتور STREAN ذغالی ST-7.5", power: "7.5 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-7.5.webp", features: ["ذغالی", "کم مصرف", "سیستم هشدار"] },
+            { id: 64, name: "آلترناتور STREAN ذغالی ST-10", power: "10 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-10.webp", features: ["ذغالی", "کم صدا", "بازدهی بالا"] },
+            { id: 65, name: "آلترناتور STREAN ذغالی ST-12", power: "12 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-12.webp", features: ["ذغالی", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 66, name: "آلترناتور STREAN ذغالی ST-15", power: "15 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-15.webp", features: ["ذغالی", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 67, name: "آلترناتور STREAN ذغالی ST-20", power: "20 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-20.webp", features: ["ذغالی", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 68, name: "آلترناتور STREAN ذغالی ST-25", power: "25 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-25.webp", features: ["ذغالی", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 69, name: "آلترناتور STREAN ذغالی STC-30", power: "30 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-30.webp", features: ["ذغالی", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 70, name: "آلترناتور STREAN ذغالی STC-40", power: "40 کاوا ", image: "assets/images/PRODUCTS/alternator/STREAN/sc-40.webp", features: ["ذغالی", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
           ]
         },
         meccalte: {
@@ -1081,4 +1081,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
