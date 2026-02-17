@@ -728,16 +728,16 @@ document.addEventListener("DOMContentLoaded", () => {
         stamford: {
           name: "STAMFORD",
           products: [
-            { id: 51, name: "آلترناتور Stamford DS 164 B", power: "12.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci224.webp", features: ["کیفیت بالا", "بازدهی 95%", "عایق کلاس H"] },
-            { id: 52, name: "آلترناتور Stamford DS 164 C", power: "13.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci274.webp", features: ["کیفیت بالا", "کم صدا", "استارت سریع"] },
-            { id: 53, name: "آلترناتور Stamford DS 164 D", power: "16 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci324.webp", features: ["کیفیت بالا", "کم مصرف", "سیستم خنک‌کننده"] },
-            { id: 54, name: "آلترناتور Stamford DS 184 ES", power: "20 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci374.webp", features: ["کیفیت بالا", "کم صدا", "بازدهی بالا"] },
-            { id: 55, name: "آلترناتور Stamford DS 184 F", power: "22.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci424.webp", features: ["کیفیت بالا", "فشار قوی", "مقاوم در شرایط سخت"] },
-            { id: 56, name: "آلترناتور Stamford DS 184 G", power: "27.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci474.webp", features: ["کیفیت بالا", "استارت سریع", "کنترل دیجیتال"] },
-            { id: 57, name: "آلترناتور Stamford DS 184 H", power: "31.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci524.webp", features: ["کیفیت بالا", "پرقدرت", "گارانتی 2 ساله"] },
-            { id: 58, name: "آلترناتور Stamford DS 184 J", power: "37.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci574.webp", features: ["کیفیت بالا", "پرقدرت", "سیستم هشدار هوشمند"] },
-            { id: 59, name: "آلترناتور Stamford DS 224 C", power: "40 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci624.webp", features: ["کیفیت بالا", "پرقدرت", "سیستم کنترل از راه دور"] },
-            { id: 60, name: "آلترناتور Stamford DS 224 D", power: "42.5 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/uci674.webp", features: ["کیفیت بالا", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
+            { id: 51, name: "آلترناتور Stamford DS 224 F", power: "72.5کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS72.5.webp", features: ["کیفیت بالا", "بازدهی 95%", "عایق کلاس H"] },
+            { id: 52, name: "آلترناتور Stamford DS 224 G", power: "85 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS85.webp", features: ["کیفیت بالا", "کم صدا", "استارت سریع"] },
+            { id: 53, name: "آلترناتور Stamford DS 274 C", power: "100 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS100.webp", features: ["کیفیت بالا", "کم مصرف", "سیستم خنک‌کننده"] },
+            { id: 54, name: "آلترناتور Stamford DS 274 E", power: "140 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS140.webp", features: ["کیفیت بالا", "کم صدا", "بازدهی بالا"] },
+            { id: 55, name: "آلترناتور Stamford DS 274 F", power: "160 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS160.webp", features: ["کیفیت بالا", "فشار قوی", "مقاوم در شرایط سخت"] },
+            { id: 56, name: "آلترناتور Stamford DS 274 G", power: "180 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS180.webp", features: ["کیفیت بالا", "استارت سریع", "کنترل دیجیتال"] },
+            { id: 57, name: "آلترناتور Stamford DS 274 H", power: "200 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS200.webp", features: ["کیفیت بالا", "پرقدرت", "گارانتی 2 ساله"] },
+            { id: 58, name: "آلترناتور Stamford DS 250 K", power: "250 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS250.webp", features: ["کیفیت بالا", "پرقدرت", "سیستم هشدار هوشمند"] },
+            { id: 59, name: "آلترناتور Stamford DS 314 D", power: "300 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS300.webp", features: ["کیفیت بالا", "پرقدرت", "سیستم کنترل از راه دور"] },
+            { id: 60, name: "آلترناتور Stamford DS 314 E", power: "325 کاوا", image: "assets/images/PRODUCTS/alternator/stamford/DS325.webp", features: ["کیفیت بالا", "فشار قوی", "سیستم خنک‌کننده پیشرفته"] }
           ]
         },
         stamfordCoal: {
